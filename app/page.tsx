@@ -252,6 +252,21 @@ export default function Home() {
                 convert without losing detail.
               </p>
             </article>
+            <article className="model-card">
+              <img
+                className="model-img"
+                src="/models/biology.png"
+                alt="3D-printed biomedical and organic model"
+                width="400"
+                height="400"
+                loading="lazy"
+              />
+              <h3>Biomedical &amp; organic</h3>
+              <p>
+                Anatomical models, prosthetics and organic shapes. Smooth surfaces and
+                fine curvature are preserved in both binary and ASCII STL.
+              </p>
+            </article>
           </div>
         </section>
 
