@@ -548,6 +548,12 @@ a {
   font-weight: 800;
   letter-spacing: -0.3px;
 }
+.section-lede {
+  color: var(--muted);
+  font-size: clamp(15px, 2vw, 17px);
+  max-width: 720px;
+  margin: -14px 0 26px;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

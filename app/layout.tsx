@@ -2,18 +2,37 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "3MF TO STL — Convert 3MF to STL in your browser",
+  // Primary keyword as the page title, per SEO request.
+  title: "3MF to STL Converter Online",
   metadataBase: new URL("https://www.3mf2stl.com"),
   description:
-    "Fast, private, fully client-side 3MF to STL converter. No uploads, 150 MB per file, real progress reporting, batch ZIP export. Built with Next.js.",
-  keywords: ["3MF", "STL", "converter", "mesh", "CAD", "3D printing", "Next.js"],
+    "Convert 3MF to STL online for free, 100% in your browser. No uploads, up to 150 MB per file, real-time progress, batch ZIP export, and accurate 3MF build-tree support for 3D printing.",
+  keywords: [
+    "3MF to STL converter online",
+    "3MF to STL",
+    "convert 3MF to STL",
+    "3MF converter",
+    "STL converter",
+    "online 3MF to STL",
+    "3D printing converter",
+  ],
   authors: [{ name: "3MF TO STL" }],
+  applicationName: "3MF TO STL",
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "3MF TO STL — 3MF to STL converter",
+    title: "3MF to STL Converter Online — Free & Private",
     url: "https://www.3mf2stl.com",
     description:
-      "Private, in-browser 3MF → STL conversion. No uploads, real progress, batch export.",
+      "Free 3MF to STL conversion that runs entirely in your browser. No uploads, real-time progress, batch ZIP export.",
+    siteName: "3MF TO STL",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3MF to STL Converter Online — Free & Private",
+    description:
+      "Convert 3MF to STL online, 100% in your browser. No uploads, up to 150 MB, batch export.",
   },
 };
 

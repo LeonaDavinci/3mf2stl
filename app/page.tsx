@@ -1,9 +1,36 @@
 import Converter from "@/components/Converter";
 import ThemeToggle from "@/components/ThemeToggle";
 
+// Fully static prerendering for best SEO + instant loads.
+export const dynamic = "force-static";
+
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "3MF to STL Converter Online",
+    url: "https://www.3mf2stl.com",
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Any",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    description:
+      "Convert 3MF to STL online for free, entirely in your browser. No uploads, up to 150 MB per file, batch ZIP export.",
+    featureList: [
+      "Client-side 3MF to STL conversion",
+      "No file uploads — fully private",
+      "Binary and ASCII STL output",
+      "Batch conversion with ZIP export",
+      "Up to 150 MB per file",
+    ],
+  };
+
   return (
     <div className="page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="aurora" aria-hidden />
 
       <header className="nav">
@@ -110,6 +137,64 @@ export default function Home() {
               <div className="card-ic">⚡</div>
               <h3>150 MB per file</h3>
               <p>Roomy limit (3× the usual 50 MB) with a clear warning if a file is too big to handle.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="why" className="section">
+          <h2>Why choose 3mf2stl.com?</h2>
+          <p className="section-lede">
+            Lots of file converters exist. Here is why makers, engineers and
+            3D-printing enthusiasts convert 3MF to STL online with us.
+          </p>
+          <div className="grid">
+            <div className="card">
+              <div className="card-ic">🔐</div>
+              <h3>Your files never leave your device</h3>
+              <p>
+                Every conversion runs inside your browser. Nothing is uploaded to a
+                server, so your designs stay completely private.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-ic">⚡</div>
+              <h3>Instant, no server round-trips</h3>
+              <p>
+                Start converting the moment you drop a file. With no network
+                upload, even large models begin processing right away.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-ic">🎯</div>
+              <h3>Accurate 3MF support</h3>
+              <p>
+                We resolve the full build tree — objects, nested components and
+                per-item 4×4 transforms — so assemblies come out correct.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-ic">📦</div>
+              <h3>Batch conversion + ZIP</h3>
+              <p>
+                Queue many .3mf files, pick binary or ASCII, and pull the whole lot
+                down as a single ZIP.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-ic">🪶</div>
+              <h3>Lightweight by design</h3>
+              <p>
+                No 3D engine bloating the page. The site weighs almost nothing and
+                loads instantly on any connection.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-ic">💸</div>
+              <h3>Free, no account needed</h3>
+              <p>
+                No sign-up, no watermark, no per-file limits. Convert as many models
+                as you like, for free.
+              </p>
             </div>
           </div>
         </section>
