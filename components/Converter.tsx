@@ -166,6 +166,12 @@ export default function Converter() {
 
   const doneCount = files.filter((f) => f.status === "done").length;
   const busy = files.some((f) => f.status === "converting");
+  const overall = files.length
+    ? Math.round(files.reduce((s, f) => s + f.progress, 0) / files.length)
+    : 0;
+  const convertingAny = files.some(
+    (f) => f.status === "converting" || f.status === "queued",
+  );
 
   return (
     <div className="converter">
@@ -229,6 +235,27 @@ export default function Converter() {
       </div>
 
       {files.length > 0 && (
+        <div className="batch">
+          <div className="batch-head">
+            <span>
+              {convertingAny
+                ? "Converting…"
+                : doneCount === files.length
+                  ? "All files converted"
+                  : "In queue"}
+            </span>
+            <span className="batch-pct">{overall}%</span>
+          </div>
+          <div className="batch-bar">
+            <div
+              className={"batch-fill" + (overall >= 100 ? " complete" : "")}
+              style={{ width: overall + "%" }}
+            />
+          </div>
+        </div>
+      )}
+
+      {files.length > 0 && (
         <div className="queue">
           {files.map((f) => (
             <div key={f.id} className={"qitem q-" + f.status}>
@@ -255,7 +282,12 @@ export default function Converter() {
                   <span>·</span>
                   <span>{f.stats.unit}</span>
                   <button className="q-dl" onClick={() => downloadOne(f)} type="button">
-                    Download .stl
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                      <path d="M12 3v12" />
+                      <path d="M7 10l5 5 5-5" />
+                      <path d="M5 21h14" />
+                    </svg>
+                    Download STL
                   </button>
                 </div>
               ) : f.status === "error" ? (

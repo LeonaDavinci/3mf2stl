@@ -352,6 +352,78 @@ a {
   border-radius: 999px;
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   transition: width 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.bar-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: sheen 1.4s ease-in-out infinite;
+}
+
+/* batch progress (top-level) */
+.batch {
+  margin-top: 18px;
+}
+.batch-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-family: var(--mono);
+}
+.batch-pct {
+  color: var(--accent);
+  font-weight: 700;
+}
+.batch-bar {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(120, 150, 220, 0.16);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.batch-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.batch-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: sheen 1.4s ease-in-out infinite;
+}
+.batch-fill.complete {
+  background: linear-gradient(90deg, var(--ok), #2dd4bf);
+}
+.batch-fill.complete::after {
+  animation: none;
+}
+@keyframes sheen {
+  100% {
+    transform: translateX(100%);
+  }
 }
 .q-stage {
   font-size: 12px;
@@ -370,17 +442,22 @@ a {
 }
 .q-dl {
   margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   border: 1px solid var(--accent);
   background: rgba(55, 230, 255, 0.1);
   color: var(--accent);
   border-radius: 8px;
   padding: 5px 12px;
   font-size: 12.5px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.15s;
 }
 .q-dl:hover {
   background: rgba(55, 230, 255, 0.2);
+  transform: translateY(-1px);
 }
 .q-error {
   margin-top: 8px;
