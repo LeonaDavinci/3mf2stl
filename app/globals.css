@@ -577,8 +577,13 @@ a {
 /* model types (with images) */
 .models-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
+}
+@media (min-width: 920px) {
+  .models-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .model-card {
   border: 1px solid var(--border);

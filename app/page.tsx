@@ -51,7 +51,8 @@ export default function Home() {
           <span>3MF TO STL</span>
         </a>
         <nav className="nav-links">
-          <a href="#features">Features</a>
+          <a href="#why">Why us</a>
+          <a href="#models">Model types</a>
           <a href="#how">How it works</a>
           <a href="#faq">FAQ</a>
           <ThemeToggle />
@@ -102,42 +103,6 @@ export default function Home() {
                 <path d="M510 80 L470 100 L470 150 L510 130 Z" />
               </g>
             </svg>
-          </div>
-        </section>
-
-        <section id="features" className="section">
-          <h2>Built for people who convert a lot</h2>
-          <div className="grid">
-            <div className="card">
-              <div className="card-ic">🔒</div>
-              <h3>Private by design</h3>
-              <p>Files are decoded and re-encoded on your device. Nothing is uploaded to any server — ever.</p>
-            </div>
-            <div className="card">
-              <div className="card-ic">📊</div>
-              <h3>Honest progress</h3>
-              <p>Staged progress (extract → resolve → build → encode) with a live percentage, even on huge meshes.</p>
-            </div>
-            <div className="card">
-              <div className="card-ic">📦</div>
-              <h3>Batch + ZIP</h3>
-              <p>Queue many files, pick binary or ASCII, and pull the whole lot down as a single ZIP.</p>
-            </div>
-            <div className="card">
-              <div className="card-ic">🪶</div>
-              <h3>Lightweight</h3>
-              <p>No 3D engine, no heavy frameworks in the way. The page weighs almost nothing and loads instantly.</p>
-            </div>
-            <div className="card">
-              <div className="card-ic">🧩</div>
-              <h3>Real 3MF support</h3>
-              <p>Resolves components, build-item transforms and multiple objects into correct world-space triangles.</p>
-            </div>
-            <div className="card">
-              <div className="card-ic">⚡</div>
-              <h3>150 MB per file</h3>
-              <p>Roomy limit (3× the usual 50 MB) with a clear warning if a file is too big to handle.</p>
-            </div>
           </div>
         </section>
 
