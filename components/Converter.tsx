@@ -117,7 +117,7 @@ export default function Converter() {
         stage: "Queued",
       }));
       setFiles((prev) => [...prev, ...newItems]);
-      void runConversion(newItems);
+      // Conversion starts when the user clicks the visible "Convert" button.
     },
     [runConversion, toast],
   );
@@ -166,6 +166,7 @@ export default function Converter() {
 
   const doneCount = files.filter((f) => f.status === "done").length;
   const busy = files.some((f) => f.status === "converting");
+  const queued = files.filter((f) => f.status === "queued");
   const overall = files.length
     ? Math.round(files.reduce((s, f) => s + f.progress, 0) / files.length)
     : 0;
@@ -209,8 +210,18 @@ export default function Converter() {
           </svg>
         </div>
         <p className="dz-title">Drop .3mf files here</p>
+        <button
+          className="dz-btn"
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            inputRef.current?.click();
+          }}
+        >
+          Choose .3mf file
+        </button>
         <p className="dz-sub">
-          or <span className="link">browse</span> — up to <strong>150 MB</strong> each, multiple files supported
+          or drag &amp; drop — up to <strong>150 MB</strong> each, multiple files supported
         </p>
       </div>
 
@@ -309,6 +320,18 @@ export default function Converter() {
 
       {files.length > 0 && (
         <div className="actions">
+          <button
+            className="btn primary"
+            onClick={() => runConversion(queued)}
+            disabled={busy || queued.length === 0}
+            type="button"
+          >
+            {busy
+              ? "Converting…"
+              : queued.length
+                ? `Convert ${queued.length} file${queued.length > 1 ? "s" : ""}`
+                : "All converted"}
+          </button>
           <button className="btn primary" onClick={downloadAll} disabled={!doneCount} type="button">
             Download all ({doneCount}) as ZIP
           </button>

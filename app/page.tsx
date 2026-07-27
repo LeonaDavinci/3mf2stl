@@ -199,6 +199,62 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="models" className="section">
+          <h2>3MF models you can convert with 3mf2stl.com</h2>
+          <p className="section-lede">
+            From tiny tabletop miniatures to multi-part mechanical assemblies,
+            3mf2stl.com flattens every 3MF build into clean, slicer-ready STL —
+            transforms, nested components and all.
+          </p>
+          <div className="models-grid">
+            <article className="model-card">
+              <img
+                className="model-img"
+                src="/models/miniature.png"
+                alt="3D-printed miniature figurine"
+                width="400"
+                height="400"
+                loading="lazy"
+              />
+              <h3>Miniatures &amp; figurines</h3>
+              <p>
+                Tabletop characters, busts and detailed sculptures. Binary STL keeps
+                fine features intact for crisp prints.
+              </p>
+            </article>
+            <article className="model-card">
+              <img
+                className="model-img"
+                src="/models/mechanical.png"
+                alt="3D-printed mechanical parts and gears"
+                width="400"
+                height="400"
+                loading="lazy"
+              />
+              <h3>Mechanical &amp; functional parts</h3>
+              <p>
+                Gears, brackets and assemblies. We resolve each component's transform
+                so multi-part models align perfectly.
+              </p>
+            </article>
+            <article className="model-card">
+              <img
+                className="model-img"
+                src="/models/architecture.png"
+                alt="3D-printed architectural model"
+                width="400"
+                height="400"
+                loading="lazy"
+              />
+              <h3>Architecture &amp; terrain</h3>
+              <p>
+                Buildings, castles and dioramas — even large meshes up to 150&nbsp;MB —
+                convert without losing detail.
+              </p>
+            </article>
+          </div>
+        </section>
+
         <section id="how" className="section">
           <h2>How it works</h2>
           <ol className="steps">
