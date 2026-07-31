@@ -8,13 +8,13 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "3MF to STL Converter Online",
-    url: "https://www.3mf2stl.com",
+    name: "3mf to stl converter in seconds",
+    url: "https://www.3mftostl.site",
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     description:
-      "Convert 3MF to STL online for free, entirely in your browser. No uploads, up to 150 MB per file, batch ZIP export.",
+      "A browser-native 3MF to STL converter. Your file is rebuilt locally and exported as binary or ASCII STL in seconds — nothing is uploaded.",
     featureList: [
       "Client-side 3MF to STL conversion",
       "No file uploads — fully private",
@@ -62,15 +62,15 @@ export default function Home() {
       <main id="top">
         <section className="hero">
           <div className="hero-copy">
-            <span className="pill">100% in-browser · no uploads</span>
+            <span className="pill">Runs on your device · nothing is uploaded</span>
             <h1>
-              Turn <span className="grad">3MF</span> into <span className="grad">STL</span>
-              <br /> without leaving your machine
+              From <span className="grad">3MF</span> to <span className="grad">STL</span>
+              <br /> in a few seconds — without sending a byte anywhere
             </h1>
             <p className="lede">
-              A fast, private 3MF&nbsp;→&nbsp;STL converter that runs entirely in your
-              browser. Drop a file, watch a real progress bar, download binary or ASCII
-              STL — even bundle a whole batch as one ZIP.
+              3mftostl.site reads your 3MF package in the browser, rebuilds every
+              mesh with its transforms, and hands you a clean STL. No cloud, no
+              queue, no file-size surprises.
             </p>
           </div>
 
@@ -107,69 +107,72 @@ export default function Home() {
         </section>
 
         <section id="why" className="section">
-          <h2>Why choose 3mf2stl.com?</h2>
+          <h2>Why 3mftostl.site instead of yet another upload-and-wait tool?</h2>
           <p className="section-lede">
-            Lots of file converters exist. Here is why makers, engineers and
-            3D-printing enthusiasts convert 3MF to STL online with us.
+            Most converters ship your design to a server you can&apos;t see. We took
+            the opposite bet — every byte stays on your machine. Here is what that
+            buys you.
           </p>
           <div className="grid">
             <div className="card">
               <div className="card-ic">🔐</div>
-              <h3>Your files never leave your device</h3>
+              <h3>Private by architecture</h3>
               <p>
-                Every conversion runs inside your browser. Nothing is uploaded to a
-                server, so your designs stay completely private.
+                Conversion runs in JavaScript on your own device. Your models never
+                touch our disks or anyone else&apos;s, so confidential prints stay
+                confidential.
               </p>
             </div>
             <div className="card">
               <div className="card-ic">⚡</div>
-              <h3>Instant, no server round-trips</h3>
+              <h3>No network round-trips</h3>
               <p>
-                Start converting the moment you drop a file. With no network
-                upload, even large models begin processing right away.
+                Because nothing is uploaded, even a 120&nbsp;MB build starts
+                transforming the instant you drop it — no progress bar stuck at
+                &quot;uploading.&quot;
               </p>
             </div>
             <div className="card">
-              <div className="card-ic">🎯</div>
-              <h3>Accurate 3MF support</h3>
+              <div className="card-ic">🧩</div>
+              <h3>Real build-tree support</h3>
               <p>
-                We resolve the full build tree — objects, nested components and
-                per-item 4×4 transforms — so assemblies come out correct.
+                We walk the full 3MF object tree — nested parts, instances and their
+                4×4 matrices — so multi-body assemblies keep their intended shape.
               </p>
             </div>
             <div className="card">
-              <div className="card-ic">📦</div>
+              <div className="card-ic">🗜️</div>
               <h3>Batch conversion + ZIP</h3>
               <p>
-                Queue many .3mf files, pick binary or ASCII, and pull the whole lot
-                down as a single ZIP.
+                Queue several .3mf files, pick binary or ASCII, and pull the whole
+                batch down as a single ZIP in one click.
               </p>
             </div>
             <div className="card">
               <div className="card-ic">🪶</div>
-              <h3>Lightweight by design</h3>
+              <h3>Tiny footprint</h3>
               <p>
-                No 3D engine bloating the page. The site weighs almost nothing and
-                loads instantly on any connection.
+                No heavy 3D engine behind the page. It is a few kilobytes of CSS and
+                JS, so it opens instantly on any connection or old laptop.
               </p>
             </div>
             <div className="card">
-              <div className="card-ic">💸</div>
-              <h3>Free, no account needed</h3>
+              <div className="card-ic">🆓</div>
+              <h3>No catch</h3>
               <p>
-                No sign-up, no watermark, no per-file limits. Convert as many models
-                as you like, for free.
+                No login wall, no watermark, no per-file ceiling. Convert as many
+                models as you like, for free, forever.
               </p>
             </div>
           </div>
         </section>
 
         <section id="models" className="section">
-          <h2>3MF models you can convert with 3mf2stl.com</h2>
+          <h2>What people throw at 3mftostl.site</h2>
           <p className="section-lede">
-            From tiny tabletop miniatures to multi-part mechanical assemblies,
-            3mf2stl.com flattens every 3MF build into clean, slicer-ready STL —
-            transforms, nested components and all.
+            Dice, drone frames, dioramas — if it ships as a 3MF, it becomes
+            slicer-ready STL. 3mftostl.site flattens the whole build, transforms and
+            nested components included.
           </p>
           <div className="models-grid">
             <article className="model-card">
@@ -183,8 +186,8 @@ export default function Home() {
               />
               <h3>Miniatures &amp; figurines</h3>
               <p>
-                Tabletop characters, busts and detailed sculptures. Binary STL keeps
-                fine features intact for crisp prints.
+                Tabletop heroes, busts and high-detail sculpts. Binary STL keeps the
+                crisp edges your resin or FDM printer wants.
               </p>
             </article>
             <article className="model-card">
@@ -198,8 +201,8 @@ export default function Home() {
               />
               <h3>Mechanical &amp; functional parts</h3>
               <p>
-                Gears, brackets and assemblies. We resolve each component's transform
-                so multi-part models align perfectly.
+                Gears, brackets and multi-body assemblies. Each instance&apos;s
+                transform is honored, so parts line up the way the designer intended.
               </p>
             </article>
             <article className="model-card">
@@ -213,8 +216,8 @@ export default function Home() {
               />
               <h3>Architecture &amp; terrain</h3>
               <p>
-                Buildings, castles and dioramas — even large meshes up to 150&nbsp;MB —
-                convert without losing detail.
+                Buildings, castles, landscape tiles — even meshes near the 150&nbsp;MB
+                mark — convert without dropping facets.
               </p>
             </article>
             <article className="model-card">
@@ -228,35 +231,35 @@ export default function Home() {
               />
               <h3>Biomedical &amp; organic</h3>
               <p>
-                Anatomical models, prosthetics and organic shapes. Smooth surfaces and
-                fine curvature are preserved in both binary and ASCII STL.
+                Anatomy, prosthetics, organic curves. Surfaces stay smooth in both
+                binary and ASCII STL output.
               </p>
             </article>
           </div>
         </section>
 
         <section id="how" className="section">
-          <h2>How it works</h2>
+          <h2>Three steps, zero uploads</h2>
           <ol className="steps">
             <li>
               <span className="step-n">1</span>
               <div>
                 <h3>Drop your .3mf</h3>
-                <p>Drag one or many files onto the zone, or browse. We only accept .3mf and reject oversized files up front.</p>
+                <p>One file or a whole batch. We read the extension and bounce oversized files before they ever choke the tab.</p>
               </div>
             </li>
             <li>
               <span className="step-n">2</span>
               <div>
-                <h3>We convert locally</h3>
-                <p>The 3MF (a zipped mesh format) is unzipped, its build tree is resolved with all transforms, and triangles are flattened.</p>
+                <h3>We rebuild it locally</h3>
+                <p>The 3MF — a zip of meshes plus a build tree — is unpacked, its transforms resolved, and every triangle flattened into STL.</p>
               </div>
             </li>
             <li>
               <span className="step-n">3</span>
               <div>
-                <h3>Download STL</h3>
-                <p>Grab each file individually, or export the whole queue as a ZIP — binary or ASCII, your choice.</p>
+                <h3>Save your STL</h3>
+                <p>Grab each result on its own, or pull the full queue as a ZIP — binary for slicers, ASCII when a tool insists.</p>
               </div>
             </li>
           </ol>
@@ -266,28 +269,28 @@ export default function Home() {
           <h2>FAQ</h2>
           <div className="faq">
             <details>
-              <summary>Is my file really never uploaded?</summary>
-              <p>Yes. All parsing and encoding happens in your browser tab via JavaScript. There is no server endpoint that receives your model.</p>
+              <summary>Does my file actually stay on my device?</summary>
+              <p>Yes. Every byte is parsed and encoded by JavaScript in your tab. There is no server endpoint that receives your model.</p>
             </details>
             <details>
-              <summary>Binary or ASCII STL — which should I pick?</summary>
-              <p>Binary is smaller and faster to write, and is what most slicers expect. ASCII is human-readable text; choose it only when a tool specifically needs it.</p>
+              <summary>Binary or ASCII — which do I want?</summary>
+              <p>Binary is compact and is what nearly every slicer expects. ASCII is plain text; choose it only when a specific workflow demands it.</p>
             </details>
             <details>
-              <summary>What is the file size limit?</summary>
-              <p>150 MB per file. Larger files are rejected with a warning before conversion starts, to keep the tab responsive.</p>
+              <summary>How big a file can I convert?</summary>
+              <p>Up to 150 MB each. Anything larger is rejected up front with a clear note, keeping the page responsive.</p>
             </details>
             <details>
-              <summary>Does it handle assemblies with multiple parts?</summary>
-              <p>Yes. MeshForge resolves the full 3MF build tree, including nested components and per-item 4×4 transforms, so multi-object models come out correct.</p>
+              <summary>Will multi-part assemblies come out right?</summary>
+              <p>They will. 3mftostl.site walks the entire 3MF build tree — nested components and per-item 4×4 transforms included — so multi-object models stay aligned.</p>
             </details>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <span>3MF TO STL · 3MF → STL, client-side.</span>
-        <span className="muted">No tracking. No uploads. Just conversion.</span>
+        <span>3MF TO STL · built for people who&apos;d rather not upload.</span>
+        <span className="muted">No tracking. No uploads. Just STL.</span>
       </footer>
     </div>
   );

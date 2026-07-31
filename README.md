@@ -4,7 +4,7 @@ A fast, private **3MF → STL** converter that runs **entirely in your browser**
 No uploads, no server, no 3D engine bloating the page. Built with **Next.js (App
 Router, SSR)** + React + TypeScript.
 
-🌐 Live site: **https://www.3mf2stl.com**
+🌐 Live site: **https://www.3mftostl.site**
 
 ## Why it's different
 
@@ -24,7 +24,7 @@ Router, SSR)** + React + TypeScript.
 
 3MF is a ZIP container holding one or more `.model` XML files. Each model declares
 `<resources>` with `<object>` meshes and a `<build>` listing the objects (with
-optional transforms) that get printed. MeshForge:
+optional transforms) that get printed. The converter:
 
 1. unzips the archive (`fflate`),
 2. parses every `.model` with a small namespace-agnostic tokenizer,

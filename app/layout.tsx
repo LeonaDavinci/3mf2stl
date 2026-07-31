@@ -2,37 +2,37 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  // Primary keyword as the page title, per SEO request.
-  title: "3MF to STL Converter Online",
-  metadataBase: new URL("https://www.3mf2stl.com"),
+  title: "3mf to stl converter in seconds",
+  metadataBase: new URL("https://www.3mftostl.site"),
   description:
-    "Convert 3MF to STL online for free, 100% in your browser. No uploads, up to 150 MB per file, real-time progress, batch ZIP export, and accurate 3MF build-tree support for 3D printing.",
+    "3mftostl.site turns 3MF files into STL meshes right inside your browser — no installs, no uploads, no waiting on a server. Drop a model, convert it locally, and export binary or ASCII STL in seconds.",
   keywords: [
-    "3MF to STL converter online",
+    "3mf to stl converter in seconds",
     "3MF to STL",
     "convert 3MF to STL",
     "3MF converter",
     "STL converter",
-    "online 3MF to STL",
+    "client side 3MF to STL",
     "3D printing converter",
+    "private 3MF converter",
   ],
   authors: [{ name: "3MF TO STL" }],
   applicationName: "3MF TO STL",
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "3MF to STL Converter Online — Free & Private",
-    url: "https://www.3mf2stl.com",
+    title: "3mf to stl converter in seconds",
+    url: "https://www.3mftostl.site",
     description:
-      "Free 3MF to STL conversion that runs entirely in your browser. No uploads, real-time progress, batch ZIP export.",
+      "A browser-native 3MF to STL converter. Nothing is uploaded — your model is rebuilt locally and exported in seconds.",
     siteName: "3MF TO STL",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "3MF to STL Converter Online — Free & Private",
+    title: "3mf to stl converter in seconds",
     description:
-      "Convert 3MF to STL online, 100% in your browser. No uploads, up to 150 MB, batch export.",
+      "Convert 3MF to STL in your browser. No uploads, up to 150 MB, batch ZIP export, ready in seconds.",
   },
 };
 
