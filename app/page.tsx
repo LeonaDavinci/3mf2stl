@@ -286,6 +286,17 @@ export default function Home() {
             </details>
           </div>
         </section>
+
+        <section id="cura" className="section">
+          <h2>Converting 3MF to STL for Cura?</h2>
+          <p className="section-lede">
+            UltiMaker Cura slices STL natively. If your model ships as 3MF, flatten it
+            to a Cura-ready STL first — our{" "}
+            <a href="/convert-3mf-to-stl-cura">3MF to STL for Cura guide</a> walks
+            through exactly how, with Cura-specific tips on binary vs ASCII, scale and
+            multi-part assemblies.
+          </p>
+        </section>
       </main>
 
       <footer className="footer">
