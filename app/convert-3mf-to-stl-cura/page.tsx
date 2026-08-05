@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title: "Convert 3MF to STL for Cura — in seconds, no upload",
-    url: "https://www.3mftostl.site/convert-3mf-to-stl-cura",
+    url: "https://www.3mf2stl.com/convert-3mf-to-stl-cura",
     description:
       "Flatten a 3MF build into a Cura-ready STL in your browser. No uploads, binary output, assemblies kept intact.",
     siteName: "3MF TO STL",
@@ -38,7 +38,7 @@ export default function CuraPage() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "Convert 3MF to STL for Cura",
-    url: "https://www.3mftostl.site/convert-3mf-to-stl-cura",
+    url: "https://www.3mf2stl.com/convert-3mf-to-stl-cura",
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -90,7 +90,7 @@ export default function CuraPage() {
             </h1>
             <p className="lede">
               UltiMaker Cura slices STL natively. When your download ships as 3MF,
-              3mftostl.site flattens it into a clean, Cura-ready STL right in your
+              3mf2stl.com flattens it into a clean, Cura-ready STL right in your
               browser — no upload, no account, no waiting on a server.
             </p>
           </div>
@@ -179,7 +179,7 @@ export default function CuraPage() {
             </details>
             <details>
               <summary>Will my multi-part 3MF stay aligned?</summary>
-              <p>Yes. 3mftostl.site resolves the full build tree — nested components and per-item 4×4 transforms — so a multi-object model flattens into correctly placed triangles.</p>
+              <p>Yes. 3mf2stl.com resolves the full build tree — nested components and per-item 4×4 transforms — so a multi-object model flattens into correctly placed triangles.</p>
             </details>
             <details>
               <summary>Units and scale — will they survive?</summary>

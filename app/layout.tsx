@@ -3,9 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "3mf to stl converter in seconds",
-  metadataBase: new URL("https://www.3mftostl.site"),
+  metadataBase: new URL("https://www.3mf2stl.com"),
   description:
-    "3mftostl.site converts 3MF to STL in your browser — no installs, no uploads. Drop a model, convert locally, and export binary or ASCII STL in seconds.",
+    "3mf2stl.com converts 3MF to STL in your browser — no installs, no uploads. Drop a model, convert locally, and export binary or ASCII STL in seconds.",
   keywords: [
     "3mf to stl converter in seconds",
     "3MF to STL",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title: "3mf to stl converter in seconds",
-    url: "https://www.3mftostl.site",
+    url: "https://www.3mf2stl.com",
     description:
       "A browser-native 3MF to STL converter. Nothing is uploaded — your model is rebuilt locally and exported in seconds.",
     siteName: "3MF TO STL",

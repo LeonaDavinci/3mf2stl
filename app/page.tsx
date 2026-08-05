@@ -9,7 +9,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "3mf to stl converter in seconds",
-    url: "https://www.3mftostl.site",
+    url: "https://www.3mf2stl.com",
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -68,7 +68,7 @@ export default function Home() {
               <br /> in a few seconds — without sending a byte anywhere
             </h1>
             <p className="lede">
-              3mftostl.site reads your 3MF package in the browser, rebuilds every
+              3mf2stl.com reads your 3MF package in the browser, rebuilds every
               mesh with its transforms, and hands you a clean STL. No cloud, no
               queue, no file-size surprises.
             </p>
@@ -107,7 +107,7 @@ export default function Home() {
         </section>
 
         <section id="why" className="section">
-          <h2>Why 3mftostl.site instead of yet another upload-and-wait tool?</h2>
+          <h2>Why 3mf2stl.com instead of yet another upload-and-wait tool?</h2>
           <p className="section-lede">
             Most converters ship your design to a server you can&apos;t see. We took
             the opposite bet — every byte stays on your machine. Here is what that
@@ -168,10 +168,10 @@ export default function Home() {
         </section>
 
         <section id="models" className="section">
-          <h2>What people throw at 3mftostl.site</h2>
+          <h2>What people throw at 3mf2stl.com</h2>
           <p className="section-lede">
             Dice, drone frames, dioramas — if it ships as a 3MF, it becomes
-            slicer-ready STL. 3mftostl.site flattens the whole build, transforms and
+            slicer-ready STL. 3mf2stl.com flattens the whole build, transforms and
             nested components included.
           </p>
           <div className="models-grid">
@@ -282,7 +282,7 @@ export default function Home() {
             </details>
             <details>
               <summary>Will multi-part assemblies come out right?</summary>
-              <p>They will. 3mftostl.site walks the entire 3MF build tree — nested components and per-item 4×4 transforms included — so multi-object models stay aligned.</p>
+              <p>They will. 3mf2stl.com walks the entire 3MF build tree — nested components and per-item 4×4 transforms included — so multi-object models stay aligned.</p>
             </details>
           </div>
         </section>
