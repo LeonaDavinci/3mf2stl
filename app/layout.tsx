@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "3mf to stl converter in seconds",
   metadataBase: new URL("https://www.3mftostl.site"),
   description:
-    "3mftostl.site turns 3MF files into STL meshes right inside your browser — no installs, no uploads, no waiting on a server. Drop a model, convert it locally, and export binary or ASCII STL in seconds.",
+    "3mftostl.site converts 3MF to STL in your browser — no installs, no uploads. Drop a model, convert locally, and export binary or ASCII STL in seconds.",
   keywords: [
     "3mf to stl converter in seconds",
     "3MF to STL",
